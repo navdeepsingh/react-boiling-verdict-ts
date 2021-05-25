@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 type scale = {
   c: 'Celsius',
@@ -16,7 +16,7 @@ const scaleNames: scale = {
 };
 
 const TemperatureInput:React.FC<IProps> = ({scale, temperature, onTemperatureChange}) => {
-  
+
   const handleChange = (e: any) => {
     onTemperatureChange(e.target.value)
   }
