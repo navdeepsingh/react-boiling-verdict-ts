@@ -8,14 +8,15 @@ type scale = {
 type IProps = {
   scale: 'c' | 'f',
   temperature: string,
-  onTemperatureChange: (temp: string) => {}
+  onTemperatureChange: (temp: string) => void
 }
 const scaleNames: scale = {
   c: 'Celsius',
   f: 'Fahrenheit',
 };
 
-const TemperatureInput:React.FC<IProps> = ({scale, temperature,onTemperatureChange}) => {
+const TemperatureInput:React.FC<IProps> = ({scale, temperature, onTemperatureChange}) => {
+  
   const handleChange = (e: any) => {
     onTemperatureChange(e.target.value)
   }
